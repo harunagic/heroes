@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="launcher_background">#FFFFFF</color>
+  <color name="red_200">#FF3D3D</color>
+  <color name="red_500">#C62F2F</color>
+  <color name="red_700">#A52727</color>
+  <color name="teal_200">#FF03DAC5</color>
+  <color name="teal_700">#FF018786</color>
+  <color name="dark">#202020</color>
+  <color name="light">#F2F2F2</color>
+</resources>

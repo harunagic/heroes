@@ -1,0 +1,83 @@
+plugins {
+  id 'com.android.application'
+  id 'kotlin-android'
+  id 'kotlin-android-extensions'
+  id 'kotlin-kapt'
+  id "androidx.navigation.safeargs"
+}
+
+apply from: '../dependencies.gradle'
+
+android {
+  compileSdkVersion buildVersions.compileSdk
+
+  defaultConfig {
+    applicationId "com.marvel.app"
+    minSdkVersion buildVersions.minSdk
+    targetSdkVersion buildVersions.targetSdk
+    versionCode buildVersions.versionCode
+    versionName buildVersions.versionName
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  buildFeatures {
+    dataBinding true
+    viewBinding = true
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+}
+
+dependencies {
+  // AndroidX
+  implementation deps.androidx.compat
+  implementation deps.androidx.core
+  implementation deps.androidx.palette
+  implementation deps.androidx.constraint
+  implementation deps.androidx.navigationui
+  implementation deps.androidx.navigationfragment
+  // Theme
+  implementation deps.theme.material
+  // DI
+  implementation deps.dagger.runtime
+  kapt deps.dagger.compiler
+  compileOnly deps.dagger.annotation
+  // RX
+  implementation deps.rx.runtime
+  implementation deps.rx.android
+  // Retrofit
+  implementation deps.retrofit.runtime
+  implementation deps.retrofit.converter
+  implementation deps.retrofit.adapter
+  implementation deps.retrofit.interceptor
+  implementation deps.retrofit.gson
+  // Room
+  implementation deps.room.runtime
+  implementation deps.room.rxJava
+  kapt deps.room.compiler
+  // Glide
+  implementation deps.glide.runtime
+  kapt deps.glide.compiler
+  implementation deps.glide.transformations
+  // Utils
+  implementation deps.helpers.timber
+
+  // Tests
+  testImplementation 'junit:junit:4.+'
+  androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

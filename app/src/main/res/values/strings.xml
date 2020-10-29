@@ -1,0 +1,11 @@
+<resources>
+  <string name="app_name">Heroes</string>
+  <string name="input_hero_name_hint">Search for hero?</string>
+  <string name="lbl_welcome">Welcome to Heroes app. \nUse top input field to search for your favorite hero. \n\nEnjoy! :D</string>
+  <string name="lbl_no_results_found">No results found. \nPlease try something else…</string>
+  <string name="lbl_full_name">Full name</string>
+  <string name="lbl_publisher_name">Publisher name</string>
+  <string name="lbl_place_of_birth">Place of birth</string>
+  <string name="lbl_first_appearance">First appearance</string>
+  <string name="lbl_aliases">Aliases</string>
+</resources>

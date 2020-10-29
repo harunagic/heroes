@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+  apply from: 'dependencies.gradle'
+  addRepos(repositories)
+  dependencies {
+    classpath deps.gradlePlugin
+    classpath deps.kotlinPlugin
+    classpath deps.safeArgsPlugin
+  }
+  repositories {
+    google()
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    jcenter()
+  }
+}
+
+allprojects {
+  gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+      options.compilerArgs << "-Xmaxerrs" << "1000"
+    }
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}

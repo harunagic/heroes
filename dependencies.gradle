@@ -1,0 +1,120 @@
+ext.deps = [:]
+
+def versions = [:]
+versions.gradlePlugin = '4.1.0'
+versions.compat = "1.1.0"
+versions.core = "1.2.0"
+versions.palette = "1.0.0"
+versions.constraint = '1.1.3'
+versions.navigation = '2.3.0'
+versions.material = '1.3.0-alpha03'
+versions.kotlin = '1.4.0'
+versions.kotlinSafeArgs = '2.3.0'
+versions.kotlinCore = '1.1.0'
+versions.retrofit = '2.5.0'
+versions.interceptor = '3.13.1'
+versions.gson = '2.8.5'
+versions.room = '2.3.0-alpha01'
+versions.dagger = "2.13"
+versions.daggerAnnotation = '10.0-b28'
+versions.rx = "2.3.0"
+versions.rxAndroid = "2.1.1"
+versions.rxBinding = "3.0.0-alpha2"
+versions.rxLifecycle = "2.0.5"
+versions.rxPermissions = "0.10.2"
+versions.glide = '4.10.0'
+versions.glideTransformations = '4.0.0'
+versions.otto = '1.3.8'
+versions.networkevents = '2.1.6'
+versions.commons = '2.5'
+versions.timber = '4.7.1'
+
+def deps = [:]
+deps.gradlePlugin = "com.android.tools.build:gradle:$versions.gradlePlugin"
+deps.kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+deps.safeArgsPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.kotlinSafeArgs"
+
+def androidx = [:]
+androidx.compat = "androidx.appcompat:appcompat:$versions.compat"
+androidx.core = "androidx.core:core-ktx:$versions.core"
+androidx.palette = "androidx.palette:palette-ktx:$versions.palette"
+androidx.constraint = "androidx.constraintlayout:constraintlayout:$versions.constraint"
+androidx.navigationui = "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+androidx.navigationfragment = "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+deps.androidx = androidx
+
+def theme = [:]
+theme.material = "com.google.android.material:material:$versions.material"
+deps.theme = theme
+
+def kotlin = [:]
+kotlin.core = "androidx.core:core-ktx:$versions.kotlinCore"
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+deps.kotlin = kotlin
+
+def retrofit = [:]
+retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.converter = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+retrofit.adapter = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+retrofit.interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.interceptor"
+retrofit.gson = "com.google.code.gson:gson:$versions.gson"
+deps.retrofit = retrofit
+
+def room = [:]
+room.runtime = "androidx.room:room-runtime:$versions.room"
+room.rxJava = "androidx.room:room-rxjava2:$versions.room"
+room.compiler = "androidx.room:room-compiler:$versions.room"
+deps.room = room
+
+def dagger = [:]
+dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
+dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
+dagger.processor = "com.google.dagger:dagger-android-processor:$versions.dagger"
+dagger.annotation = "org.glassfish:javax.annotation:$versions.daggerAnnotation"
+deps.dagger = dagger
+
+def rx = [:]
+rx.runtime = "io.reactivex.rxjava2:rxkotlin:$versions.rx"
+rx.android = "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid"
+rx.binding = "com.jakewharton.rxbinding3:rxbinding-appcompat:$versions.rxBinding"
+rx.lifecycle = "com.github.florent37:rxlifecycle:$versions.rxLifecycle"
+rx.permissions = "com.github.tbruyelle:rxpermissions:$versions.rxPermissions"
+deps.rx = rx
+
+def glide = [:]
+glide.runtime = "com.github.bumptech.glide:glide:$versions.glide"
+glide.compiler = "com.github.bumptech.glide:compiler:$versions.glide"
+glide.okhttp = "com.github.bumptech.glide:okhttp3-integration:$versions.glide"
+glide.transformations = "jp.wasabeef:glide-transformations:$versions.glideTransformations"
+deps.glide = glide
+
+def eventBus = [:]
+eventBus.otto = "com.squareup:otto:$versions.otto"
+eventBus.networkevents = "com.github.pwittchen:networkevents:$versions.networkevents"
+deps.eventBus = eventBus
+
+def helpers = [:]
+helpers.commons = "commons-io:commons-io:$versions.commons"
+helpers.joda = "joda-time:joda-time:$versions.joda"
+helpers.objectAnimator = "com.bartoszlipinski:viewpropertyobjectanimator:$versions.animator"
+helpers.timber = "com.jakewharton.timber:timber:$versions.timber"
+deps.helpers = helpers
+
+ext.deps = deps
+
+def buildVersions = [:]
+buildVersions.compileSdk = 29
+buildVersions.minSdk = 21
+buildVersions.targetSdk = 29
+buildVersions.versionCode = 1
+buildVersions.versionName = "1.0.2"
+ext.buildVersions = buildVersions
+
+static def addRepos(RepositoryHandler handler) {
+  handler.google()
+  handler.jcenter()
+  handler.maven { url "https://maven.google.com" }
+  handler.maven { url 'https://jitpack.io' }
+}
+
+ext.addRepos = this.&addRepos

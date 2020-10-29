@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+  <data>
+    <variable
+        name="viewModel"
+        type="com.marvel.app.ui.screen.hero.HeroViewModel"
+        />
+  </data>
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/listHeroes"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:overScrollMode="never"
+          app:bindHeroes="@{viewModel.heroes}"
+          app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+          app:spanCount="2"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:padding="32dp"
+          android:visibility="gone"
+          app:isVisible="@{viewModel.showNoDataMessage}"
+          >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_no_data"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/lbl_no_results_found"
+            android:textColor="@color/red_700"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:padding="32dp"
+          android:visibility="gone"
+          app:isVisible="@{viewModel.showWelcomeMessage}"
+          >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/batman"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/lbl_welcome"
+            android:textColor="@color/red_700"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+      </LinearLayout>
+
+      <ProgressBar
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          app:isVisible="@{viewModel.showLoading}"
+          />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_red_block"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        >
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/app_name"
+          android:textColor="@android:color/white"
+          android:textSize="22sp"
+          android:textStyle="bold"
+          />
+
+      <EditText
+          android:id="@+id/inputName"
+          android:layout_width="230dp"
+          android:layout_height="wrap_content"
+          android:drawableEnd="@drawable/ic_search"
+          android:drawablePadding="5dp"
+          android:hint="@string/input_hero_name_hint"
+          android:textColor="@android:color/white"
+          android:textColorHint="@color/dark"
+          />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_clear"
+        app:backgroundTint="@color/red_500"
+        app:rippleColor="@color/red_500"
+        app:tint="@android:color/white"
+        />
+
+  </FrameLayout>
+
+</layout>
