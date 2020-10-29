@@ -11,7 +11,7 @@ For development, the latest version of Android Studio is required.
 The latest version can be downloaded from [here](https://developer.android.com/studio/).
 
 This project uses the Gradle build system.
-To build this project, use the `gradlew build` command or use "Build" command in Android Studio.
+To build this project, use the `gradlew build` command or use `Build` command in Android Studio.
 
 ### Coding style
 App uses [Square](https://github.com/square/java-code-styles) coding styles.
