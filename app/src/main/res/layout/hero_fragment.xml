@@ -6,7 +6,7 @@
   <data>
     <variable
         name="viewModel"
-        type="com.marvel.app.ui.screen.hero.HeroViewModel"
+        type="com.heroes.app.ui.screen.hero.HeroViewModel"
         />
   </data>
 

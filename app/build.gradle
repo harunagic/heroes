@@ -12,7 +12,7 @@ android {
   compileSdkVersion buildVersions.compileSdk
 
   defaultConfig {
-    applicationId "com.marvel.app"
+    applicationId "com.heroes.app"
     minSdkVersion buildVersions.minSdk
     targetSdkVersion buildVersions.targetSdk
     versionCode buildVersions.versionCode

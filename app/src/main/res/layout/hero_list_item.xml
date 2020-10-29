@@ -6,7 +6,7 @@
   <data>
     <variable
         name="hero"
-        type="com.marvel.app.data.api.model.Hero"
+        type="com.heroes.app.data.api.model.Hero"
         />
   </data>
 
