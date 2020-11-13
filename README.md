@@ -18,14 +18,10 @@ App uses [Square](https://github.com/square/java-code-styles) coding styles.
 [Here's](https://github.com/square/java-code-styles/blob/main/README.md) how to configure it for use with Android Studio (instructions adapted from Sqaure README)
 
 ### SuperHero API key
-App uses [SuperHero API](https://superheroapi.com/) to load superheroes.
-To use the API, you will need to obtain a free developer API key.
-See the [SuperHere API Documentation](https://superheroapi.com/) for instructions.
-
-Once you have the key, add this line to the `config.xml` file
+To use the app you will need to obtain API key from [SuperHero API](https://superheroapi.com/), then add it to `config.xml` file like this:
 
 ```
-<string name="heroes_api_key">your SuperHero access key</string>
+<string name="heroes_api_key">your access key</string>
 ```
 
 Screenshots
@@ -39,7 +35,7 @@ Architecture
 
 ![MVVM](https://upload.wikimedia.org/wikipedia/commons/8/87/MVVMPattern.png "Model–View–ViewModel")
 
-**Repository modules** handle data operations. They provide a clean API so that the rest of the app can retrieve this data easily. They know where to get the data from and what API calls to make when data is updated. You can consider repositories to be mediators between different data sources, such as persistent models, web services, and caches.
+**Repository module** handle data operations. They provide more generic API so that the rest of the app can access data layer easily.
 
 ![Repository pattern](https://miro.medium.com/max/981/1*5kNXJ7aFSGJvuh4r4egpTg.png "Repository pattern")
 
