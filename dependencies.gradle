@@ -1,7 +1,7 @@
 ext.deps = [:]
 
 def versions = [:]
-versions.gradlePlugin = '4.1.0'
+versions.gradlePlugin = '4.1.1'
 versions.compat = "1.1.0"
 versions.core = "1.2.0"
 versions.palette = "1.0.0"
