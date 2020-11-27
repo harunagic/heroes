@@ -20,13 +20,8 @@ versions.daggerAnnotation = '10.0-b28'
 versions.rx = "2.3.0"
 versions.rxAndroid = "2.1.1"
 versions.rxBinding = "3.0.0-alpha2"
-versions.rxLifecycle = "2.0.5"
-versions.rxPermissions = "0.10.2"
 versions.glide = '4.10.0'
 versions.glideTransformations = '4.0.0'
-versions.otto = '1.3.8'
-versions.networkevents = '2.1.6'
-versions.commons = '2.5'
 versions.timber = '4.7.1'
 
 def deps = [:]
@@ -69,34 +64,21 @@ deps.room = room
 def dagger = [:]
 dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
 dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
-dagger.processor = "com.google.dagger:dagger-android-processor:$versions.dagger"
 dagger.annotation = "org.glassfish:javax.annotation:$versions.daggerAnnotation"
 deps.dagger = dagger
 
 def rx = [:]
 rx.runtime = "io.reactivex.rxjava2:rxkotlin:$versions.rx"
 rx.android = "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid"
-rx.binding = "com.jakewharton.rxbinding3:rxbinding-appcompat:$versions.rxBinding"
-rx.lifecycle = "com.github.florent37:rxlifecycle:$versions.rxLifecycle"
-rx.permissions = "com.github.tbruyelle:rxpermissions:$versions.rxPermissions"
 deps.rx = rx
 
 def glide = [:]
 glide.runtime = "com.github.bumptech.glide:glide:$versions.glide"
 glide.compiler = "com.github.bumptech.glide:compiler:$versions.glide"
-glide.okhttp = "com.github.bumptech.glide:okhttp3-integration:$versions.glide"
 glide.transformations = "jp.wasabeef:glide-transformations:$versions.glideTransformations"
 deps.glide = glide
 
-def eventBus = [:]
-eventBus.otto = "com.squareup:otto:$versions.otto"
-eventBus.networkevents = "com.github.pwittchen:networkevents:$versions.networkevents"
-deps.eventBus = eventBus
-
 def helpers = [:]
-helpers.commons = "commons-io:commons-io:$versions.commons"
-helpers.joda = "joda-time:joda-time:$versions.joda"
-helpers.objectAnimator = "com.bartoszlipinski:viewpropertyobjectanimator:$versions.animator"
 helpers.timber = "com.jakewharton.timber:timber:$versions.timber"
 deps.helpers = helpers
 
