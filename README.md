@@ -37,7 +37,7 @@ Architecture
 
 **Repository module** handle data operations. They provide more generic API so that the rest of the app can access data layer easily.
 
-![Repository pattern](https://miro.medium.com/max/981/1*5kNXJ7aFSGJvuh4r4egpTg.png "Repository pattern")
+<img align="center" src="screenshots/diagram.png" />
 
 Libraries
 --------------
