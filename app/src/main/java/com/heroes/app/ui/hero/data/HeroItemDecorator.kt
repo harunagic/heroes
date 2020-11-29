@@ -1,4 +1,4 @@
-package com.heroes.app.ui.screen.hero.data
+package com.heroes.app.ui.hero.data
 
 import android.graphics.Rect
 import android.view.View

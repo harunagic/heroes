@@ -1,4 +1,4 @@
-package com.heroes.app.ui.screen.hero.data
+package com.heroes.app.ui.hero.data
 
 import androidx.recyclerview.widget.DiffUtil
 import com.heroes.app.data.api.model.Hero

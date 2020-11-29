@@ -1,4 +1,4 @@
-package com.heroes.app.ui.screen.hero_details
+package com.heroes.app.ui.hero_details
 
 import android.os.Bundle
 import android.widget.Toast

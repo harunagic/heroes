@@ -5,8 +5,8 @@ import com.heroes.app.di.module.ApiModule
 import com.heroes.app.di.module.AppModule
 import com.heroes.app.di.module.DatabaseModule
 import com.heroes.app.di.module.ViewModelModule
-import com.heroes.app.ui.screen.hero.HeroFragment
-import com.heroes.app.ui.screen.hero_details.HeroDetailsFragment
+import com.heroes.app.ui.hero.HeroFragment
+import com.heroes.app.ui.hero_details.HeroDetailsFragment
 import dagger.Component
 import javax.inject.Singleton
 

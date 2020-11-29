@@ -4,7 +4,7 @@ import android.view.View
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.heroes.app.data.api.model.Hero
-import com.heroes.app.ui.screen.hero.data.HeroAdapter
+import com.heroes.app.ui.hero.data.HeroAdapter
 
 @BindingAdapter("app:isVisible")
 fun bindVisibility(

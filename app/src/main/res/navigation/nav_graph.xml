@@ -8,7 +8,7 @@
   <fragment
       android:id="@+id/heroFragment"
       android:label="HeroFragment"
-      android:name="com.heroes.app.ui.screen.hero.HeroFragment"
+      android:name="com.heroes.app.ui.hero.HeroFragment"
       tools:layout="@layout/hero_fragment">
     <action
         android:id="@+id/action_heroFragment_to_heroDetailsFragment"
@@ -22,7 +22,7 @@
   <fragment
       android:id="@+id/heroDetailsFragment"
       android:label="HeroDetailsFragment"
-      android:name="com.heroes.app.ui.screen.hero_details.HeroDetailsFragment"
+      android:name="com.heroes.app.ui.hero_details.HeroDetailsFragment"
       tools:layout="@layout/hero_details_fragment">
     <argument
         android:name="hero"

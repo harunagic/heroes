@@ -1,4 +1,4 @@
-package com.heroes.app.ui.screen.hero
+package com.heroes.app.ui.hero
 
 import androidx.databinding.ObservableField
 import com.heroes.app.data.api.model.Hero
