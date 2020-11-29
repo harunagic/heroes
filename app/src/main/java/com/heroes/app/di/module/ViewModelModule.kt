@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.heroes.app.di.ViewModelProviderFactory
 import com.heroes.app.di.key.ViewModelKey
-import com.heroes.app.ui.screen.hero.HeroViewModel
-import com.heroes.app.ui.screen.hero_details.HeroDetailsViewModel
+import com.heroes.app.ui.hero.HeroViewModel
+import com.heroes.app.ui.hero_details.HeroDetailsViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
