@@ -7,7 +7,9 @@ import com.heroes.app.data.mapper.HeroMapper
 import io.reactivex.Observable
 import timber.log.Timber
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class HeroRepository @Inject constructor(
   private val apiService: ApiService,
   private val heroDao: HeroDao,
